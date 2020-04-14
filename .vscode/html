@@ -52,7 +52,6 @@
 </script>
     
     
-<button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
-<p> sign in </p>
+
 <button type="submit" form="nameform" value="Submit">Submit</button>
 
