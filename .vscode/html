@@ -1,0 +1,58 @@
+<form class="border border-light p-5">
+
+    
+
+    <label for="textInput">population</label>
+    <input type="text" id="textInput" class="form-control mb-4" placeholder="data-population">
+
+    <label for="textInput">timeToElapse</label>
+    <input type="text" id="textInput" class="form-control mb-4" placeholder="data-time-to-elapse">
+
+    <label for="textInput">reportedCases</label>
+    <input type="text" id="textInput" class="form-control mb-4" placeholder="data-reported-cases">
+
+    <label for="textInput">totalHospitalBeds</label>
+    <input type="text" id="textInput" class="form-control mb-4" placeholder="data-total-hospital-beds">
+</form>
+    <div class="container">
+    <div class='col-md-5'>
+        <div class="form-group">
+            <div class='input-group date' id='datetimepicker6'>
+                <input type='text' class="form-control" />
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class='col-md-5'>
+        <div class="form-group">
+            <div class='input-group date' id='datetimepicker7'>
+                <input type='text' class="form-control" />
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $('#datetimepicker6').datetimepicker();
+        $('#datetimepicker7').datetimepicker({
+            useCurrent: false //Important! See issue #1075
+        });
+        $("#datetimepicker6").on("dp.change", function (e) {
+            $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+        });
+        $("#datetimepicker7").on("dp.change", function (e) {
+            $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+        });
+    });
+</script>
+    
+    
+<button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
+<p> sign in </p>
+<button type="submit" form="nameform" value="Submit">Submit</button>
+
